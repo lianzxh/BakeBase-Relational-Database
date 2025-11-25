@@ -2,9 +2,15 @@
 
 BakeBase is a mini relational database that aims to manage the products, customers, orders, and ingredients of a bakery shop. The objectives of the BakeBase system are to streamline bakery operations, manage stock records, generate sales reports, and enhance management decision making.
 
-This database system was created as a final project at the University of Michigan-Dearborn CIS 421 - Database Management Systems Fall'24 course. The goal of this project was to design a fully functioning relational database...
+This database system was created as a final project at the **University of Michigan-Dearborn CIS 421 - Database Management Systems Fall'24** course. The goal of this case study was to design and implement a fully functional relational database. BakeBase demonstrates the core concepts of database design.
 
-# Documentation
+- Conceptual Modeling (ER Diagrams)
+- Relational Modeling & Normalization
+- Schema Creation
+- Data Population
+- Query Design
+
+## 📑 Documentation
 
 This repository includes all code, documentation, reports, and diagrams use throughout the design process.
 - [Project Plan](/docs/Project%20Plan.pdf)
@@ -12,9 +18,9 @@ This repository includes all code, documentation, reports, and diagrams use thro
 - [Relational Model](/docs/CIS421RelationalModel.png)
 - [SQL Queries Demo](/docs/SQL%20Queries%20(Implementation).pdf)
 
-## Key Entities & Relationships
+## 📌 Key Entities & Relationships
 
-### Key Entities
+### 🔑 Key Entities
 
 | Entity                  | Description                                               |
 | ----------------------- | --------------------------------------------------------- |
@@ -26,7 +32,7 @@ This repository includes all code, documentation, reports, and diagrams use thro
 | **PRODUCT_INGREDIENTS** | Organizes the required ingredients for different products |
 
 
-### Relationships
+### 🔗 Relationships
 
 - **PRODUCTS & ORDER_ITEMS (1:N)** — Each product can appear in multiple order items, but each order item references a single product.
 
@@ -39,7 +45,7 @@ This repository includes all code, documentation, reports, and diagrams use thro
 - **INGREDIENTS & PRODUCT_INGREDIENTS (1:N)** — Each ingredient can be used in many products, and each entry in PRODUCT_INGREDIENTS refers to a specific ingredient for a specific product.
 
 
-## Diagrams
+## 📍 Diagrams
 
 ### 📍 Entity-Relationship Schema
 
@@ -48,3 +54,14 @@ This repository includes all code, documentation, reports, and diagrams use thro
 ### 📍 Relational Model
 
 ![Relational-Model](/docs/CIS421RelationalModel.png)
+
+## Importing the Database
+
+BakeBase was implemented in MySQL and developed with XAMPP. The database can be run imported and run locally.
+1. Install [XAMPP](https://www.apachefriends.org/index.html)
+2. Start MySQL service from XAMPP Control Panel
+3. Open phpMyAdmin at `http://localhost/phpmyadmin`
+4. Click **New** in phpMyAdmin
+5. Click **Import** and choose `src\bakebase_schema`, click **Go**
+6. Repeat for `src\bakebase_data`
+7. Open `docs\SQL Queries (Implementation)` and follow documentation to demo the database
